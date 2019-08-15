@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "outlook.com 去廣告",
+  "description": "去廣告、可用空間最大化",
+  "version": "1.0.0",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://outlook.live.com/*"],
+      "all_frames": true,
+      "run_at": "document_end",
+      "css": ["hidead.css"]
+    }
+  ]
+}
